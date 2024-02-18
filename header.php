@@ -33,6 +33,9 @@
       <li class="nav-item <?php if ($nav === "contact"): ?>bg-primary<?php endif;?>">
         <a class="nav-link" href="/contact.php">Contact</a>
       </li>
+      <li class="nav-item <?php if ($nav === "dashboard"): ?>bg-primary<?php endif;?>">
+        <a class="nav-link" href="/dashboard.php">Dashboard</a>
+      </li>
     </ul>
   </div>
 </nav>

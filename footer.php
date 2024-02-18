@@ -1,7 +1,7 @@
 
 </main><!-- /.container -->
-<div class="row">
-    <div class="col-md-4">
+<div class="row text-center ">
+    <div class="col-md-4 mx-auto mt-5 bg-secondary text-white">
         <?php
         require_once __DIR__ . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'compteur.php';
         ajouterVue();

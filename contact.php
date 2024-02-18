@@ -4,6 +4,7 @@ $nav = 'contact';
 
  require 'header.php' ?>
 
-Contact
+<h2 class="text-center">Contact</h2>
+
 
 <?php require 'footer.php' ?>
