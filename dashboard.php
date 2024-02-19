@@ -10,6 +10,7 @@ $moiActuel = str_pad($moiActuel, 2, '0', STR_PAD_LEFT);
 
 if ( $anneeSelection && $moiSelection){
     $total = nbrVueMois($anneeSelection, $moiSelection);
+    $detail = nbrVueDetailMois($anneeSelection, $moiSelection);
 }else {
     $total = nombre_vues();
 }
@@ -54,12 +55,32 @@ require "header.php";
         </div>
     </div>
     <div class="col-md-8">
-        <div class="card">
+        <div class="card mb-4">
             <div class="card-body">
                 <strong style="font-size: 3em;"><?= $total?></strong><br>
                 Visite<?= $total>1 ? "s" : '' ?> total
             </div>
         </div>
+        <?php if (isset($detail)): ?>
+        <h2>Détail des visites pour le mois</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Jour</th>
+                    <th>Nombre de visites</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php foreach($detail as $ligne) :?>
+                <tr>
+                    <td><?= $ligne["jour"] ?></td>
+                    <td><?= $ligne["visites"] ?> visite<?= $ligne[ 'visites' ] > 1 ? 's' : '' ?></td>
+                
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+        <?php endif; ?>
     </div>
 </div>
 
